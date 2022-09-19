@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Kanit&family=Lato&family=Open+Sans&family=Poppins:wght@300&family=Quicksand&family=Raleway&family=Roboto+Mono&family=Roboto:wght@300;400&family=Rubik&family=Sansita+Swashed&family=Titan+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration-color: #fff !important;
+}
+
+li{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body{
+    background-color:  #191970 !important;
+    min-height: 100vh;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;*/
+    background-image: url(./midnight-nature-digital-art.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} 
+
+p{
+    cursor: pointer;
+}
+
+/* input[type = "checkbox"]:focus{
+    outline: 0;
+} */
+
+input[type = "text"]{
+    padding: 0.2rem 1rem;
+}
+
+/*//!JS*/
+
+li .testing{
+    cursor: pointer;
+    /* display: none !important; */
+    visibility: hidden;
+}
+li:hover .testing{
+    visibility: visible;
+}
+
+h1{
+    color: blue;
+}
+
+#input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #fff !important;
+}
+
+#containerdiv{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0.2rem 1rem;
+}
+#containerdiv i{
+    cursor: pointer;
+}
+
+
+label{
+    border-radius: 50% !important;
+    outline: none;
+}
+
+#containerdiv{
+    background-color: #191970 !important;
+}
+
+#add{
+    color: #fff;
+}
+
+p, h1, #delete{
+     font-family: 'Kanit', sans-serif !important; 
+}
+
+
+li.completed {
+    background-color: lawngreen;
+}
+
+
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 1; /* Firefox */
+  }
+@media (max-width: 800px) {
+    :root{
+        font-size: 14px;
+    }
+    h1{
+        font-size: 3.5rem !important;
+    }
+    #input{
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (max-width:550px) {
+    #generalContainer{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.2rem !important;
+    }
+    #input{
+        width: 80vw !important;
+        font-size: 2rem !important;
+    }
+    #delete{
+        font-size: 1.5rem !important;
+    }
+    li{
+        width: 70vw !important;
+        font-size: 2rem;
+    }
+}
