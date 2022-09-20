@@ -7,7 +7,14 @@ const addBtn = document.querySelector("#add");
 let array;
 
 window.addEventListener("load",() => {
-    todoItems = JSON.parse((localStorage.getItem("items") || localStorage.setItem("items",JSON.stringify([]))));
+    // todoItems = JSON.parse((localStorage.getItem("items") || localStorage.setItem("items",JSON.stringify([]))));
+
+    if (localStorage.getItem("items")){
+        todoItems = JSON.parse(localStorage.getItem("items"))
+    }else{
+        localStorage.setItem("items",JSON.stringify([]));
+        todoItems = JSON.parse(localStorage.getItem("items"));
+    }
     array = Array.from(todoItems);
     // console.log(typeof array, array , Array.isArray(array));
     array.forEach(a => createElement(a));
@@ -41,6 +48,7 @@ addBtn.addEventListener("click",function(e){
 input.addEventListener("keydown",function(e){
     // e.preventDefault();
     if (e.code == "Enter"){
+        e.preventDefault();
         addBtn.click();
     }
 })
